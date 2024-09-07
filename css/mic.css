@@ -1,0 +1,109 @@
+
+.mic{
+  position:relative;
+  top:30%;
+  left:90%;
+  color:#fff;
+  transform:translate(-50%, -50%);
+  cursor:pointer;  
+  margin-bottom: 70%;
+}
+.mic::before ,.mic::after{
+  content:'';
+  position:relative;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  border-radius:0 0 20px 20px #1c084f;
+}
+mic::before{
+  content:'';
+  width:40px;
+  height:50px;
+  background:#1a084e;
+}
+.mic-icon{
+    box-sizing: border-box;
+    position: absolute;
+    top: 30%;
+    left: -2%;
+    transform: translate(-50%, -50%) scale(5);
+    display: block;
+    height: 6px;
+    width: 12px;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border: 2px solid;
+    border-top: 0;
+    margin-top: 20px;
+    z-index: 3;
+    cursor:pointer; 
+}
+.mic-icon::before, .mic-icon::after{
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+}
+.mic-icon::before{
+  content:'';
+  width: 2px;
+  height: 4px;
+  left: 20%;
+  top: calc(100% + 1px);
+  left:50%;
+  transform:translate(-50%, 0);
+  background-color:#fff;
+}
+.mic-icon::after{
+  content:'';
+  border:2px solid;
+  width:8px;
+  height:8px;
+  left:50%;
+  top:-10px;
+  border-radius:4px;
+  transform:translate(-50%, 0); 
+}
+.mic-shadow{
+  width:120px;
+  height:120px;
+  position:absolute;
+  border-radius:100%;
+  z-index:1;
+  left: -2%;
+  transform: translate(-50%,-50%);
+  box-shadow:10px -55px 30px 15px #823ca6, 24px -10px 47px 10px #aab3d2, -21px -25px 97px 10px #5acee3, 51px 5px 17px 10px #1b7d8f, 3px 2px 77px 10px #f30bf5;
+}
+.playing{
+  width:100px;
+  height:100px;
+  position:absolute;
+  top:50%;
+  left: -2%;
+  border-radius:100%;
+  z-index:1;
+  box-shadow:10px -55px 30px 15px #823ca6, 24px -10px 47px 10px #aab3d2, -21px -25px 97px 10px #5acee3, 51px 5px 17px 10px #1b7d8f, 3px 2px 77px 10px #f30bf5;
+  animation:shadow-rotate 1.5s linear infinite;
+  transform-origin:center;
+  animation:circle-size 0.8% linear infinite alternate;
+}
+
+@keyframes circle-size{
+  from{
+    width: 80px;
+    height: 80px; 
+  }
+  to{
+    width: 80px;
+    height: 80px;
+  }
+}
+@keyframes shadow-rotate{
+  from{
+   transform:translate(-50%, -50%) rotate(0deg);
+  }
+  to{
+     transform:translate(-50%, -50%) rotate(360deg);
+  }
+}
